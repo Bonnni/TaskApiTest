@@ -18,9 +18,9 @@ public class TaskManagerController : BaseController
     /// <param name="token"></param>
     /// <returns>task guid</returns>
     /// <response code="202">return task guid</response>
-    [HttpGet("task/")]
+    [HttpGet("task")]
     [ProducesResponseType(StatusCodes.Status202Accepted)]
-    public async Task<IActionResult> CreateEmptyTask(CancellationToken token)
+    public async Task<IActionResult> Task(CancellationToken token)
     {
         var mediator = ServiceScopeFactory.CreateScope().ServiceProvider.GetRequiredService<IMediator>();
         
